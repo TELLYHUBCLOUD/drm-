@@ -43,7 +43,7 @@ const modalResponse = async (interaction) => {
     await interaction.deferReply();
     const { value } = interaction.fields.fields.first();
     const links = value
-        ?.split("\n")
+        ?.split(",")
         .filter((v) => v.length > 10 && v.startsWith("http"));
 
     try {
